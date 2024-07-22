@@ -159,13 +159,16 @@ const Page = () => {
             <Image source={{ uri: selectedImage }} style={{ width: 200, height: 200, margin: 10 }} />
           )}
           <View style={{ flexDirection: 'row' }}>
-            <TextInput
-              style={styles.textInput}
-              value={newMessage}
-              onChangeText={setNewMessage}
-              placeholder="Escreva sua mensagem..."
-              multiline={true}
-            />
+            <View style={styles.textInputContainer}>
+              <Image source={require('../../assets/images/automessage-icon.png')} style={{ width: 20, height: 20 }}/>
+              <TextInput
+                style={styles.textInput}
+                value={newMessage}
+                onChangeText={setNewMessage}
+                placeholder="Toque aqui para digitar"
+                multiline={true}
+              />
+            </View>
 
             {/* <TouchableOpacity style={styles.sendButton} onPress={captureImage}>
               <Ionicons name="add-outline" style={styles.sendButtonText}></Ionicons>
@@ -206,7 +209,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1F1F1',
   },
   inputContainer: {
-    padding: 10,
+    padding: 20,
     backgroundColor: '#fff',
     alignItems: 'center',
     shadowColor: '#000',
@@ -218,23 +221,29 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 3,
   },
-  textInput: {
-    flex: 1,
+  textInputContainer: {
+    flexDirection: 'row',
     borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    minHeight: 40,
+    borderColor: '#E6E6E6',
+    borderRadius: 20,
+    height: 40,
     backgroundColor: '#fff',
-    paddingTop: 10,
     textAlignVertical: 'center',
+    padding: 10,
+    width: '90%',
+  },
+  textInput: {
+    marginLeft: 10,
   },
   sendButton: {
     backgroundColor: '#fff',
     borderRadius: 50,
     padding: 10,
+    borderWidth: 1,
+    borderColor: '#FC2D3F',
+    width: 40,
+    height: 40,
     marginLeft: 10,
-    alignSelf: 'flex-end',
   },
   sendButtonText: {
     color: '#FC2D3F',
