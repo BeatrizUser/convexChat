@@ -77,8 +77,8 @@ const Page = () => {
                 <Dialog.Title>Definir Nome de Usuário</Dialog.Title>
                 <Dialog.Description>Digite seu nome de usuário:</Dialog.Description>
                 <Dialog.Input onChangeText={setName} />
-                <Dialog.Button label="Definir Nome" onPress={() => setUser('user')} />
                 <Dialog.Button label="Anônimo" onPress={() => setUser('anonimo')} />
+                <Dialog.Button label="Definir Nome" onPress={() => setUser('user')} />
             </Dialog.Container>
         </View>
     );

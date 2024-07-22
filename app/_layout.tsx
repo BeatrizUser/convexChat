@@ -35,7 +35,7 @@ export default function RootLayoutNav() {
 				<Stack.Screen
 					name="(modal)/create"
 					options={{
-						headerTitle: 'Start a Chat',
+						headerTitle: 'Criar um Grupo',
 						presentation: 'modal',
 						headerLeft: () => (
 							<Link href={'/'} asChild>
